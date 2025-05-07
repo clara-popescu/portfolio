@@ -1,0 +1,513 @@
+:root {
+    --small-box-width: 40px;
+    --box-width: 80px;
+    /* bg color corresponds to square text color */
+    --base-color: var(--cream-color);
+    /* text color corresponds to square colors */
+    --accent-color: var(--oxford-blue);
+
+    /* --cream-color: #f7f6f3; */
+    --cream-color: rgb(245, 245, 245);
+    --oxford-blue: #0c1b33; 
+}
+
+.darkMode {
+   --base-color: var(--oxford-blue);
+   --accent-color: var(--cream-color);
+}
+
+
+
+@media (max-width: 640px) {
+    div.wrapper {
+        grid-template-columns: repeat(8, var(--small-box-width));
+        grid-template-rows: repeat(6, var(--small-box-width));
+    }
+
+    a.black-squares {
+        width: var(--small-box-width);
+        height: var(--small-box-width);
+        font-size: 0.8rem;
+        padding-top: 2px;
+        padding-left: 4px;
+        border: 1px solid var(--accent-color);
+        outline: solid 1px var(--accent-color);
+    }
+
+    div.box {
+        width: var(--small-box-width);
+        height: var(--small-box-width);
+        border: 1px solid var(--accent-color);
+        outline: solid 1px var(--accent-color);
+    }
+    
+    div.letter-square {
+        font-size: 1rem;
+        padding-top: 9px;
+    }
+
+    ol.list {
+        font-size: 0.8rem;
+        line-height: 1.4rem;
+    }
+
+
+    /* about me responsiveness */
+    div.btns-wrapper {
+        margin-bottom: 4vh;
+    }
+    div.about-me-main {
+        flex-direction: column;
+    }
+    div.about-me-title-wrapper {
+        margin: auto;
+        grid-template-columns: repeat(3, var(--small-box-width));
+        grid-template-rows: repeat(7, var(--small-box-width));
+    }
+
+    div.about-me-text-wrapper{
+        padding: 10px;
+        margin: 40px 0 60px 0;
+    }
+
+    div.about-me-text-wrapper p {
+        font-size: 0.8rem;
+        line-height: 1.2rem;
+    }
+
+    div.about-me-image-wrapper {
+        margin: 0 auto 20px auto;
+    }
+
+    div.about-me-image-wrapper img {
+        width: 200px;
+        border-radius: 30px;
+    }
+
+    a.about-me-btns {
+        padding: 6px 1px;
+    }
+
+    a.about-me-contact-btn {
+        left: 150px;
+    }
+
+
+
+    /* projects responsiveness */
+
+    div.projects-title-wrapper {
+        margin: auto;
+        grid-template-columns: repeat(9, var(--small-box-width));
+        grid-template-rows: repeat(1, var(--small-box-width));
+    }
+
+    div.projects-card-wrapper {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    a.divChild {
+        margin-top: 30px;
+        margin-bottom: 0;
+    }
+
+
+  }
+
+@font-face {
+    font-family: 'Montserrat-SemiBold';
+    src: url(/Montserrat/Montserrat-VariableFont_wght.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat-SemiBold';
+    font-weight: 600;
+}
+
+body {
+    background-color: var(--base-color);
+}
+
+.wrapper {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(8, var(--box-width));
+    grid-template-rows: repeat(6, var(--box-width));
+    margin-top: 13vh;
+}
+
+.box {
+    box-sizing: border-box;
+    width: var(--box-width);
+    height: var(--box-width);
+    border: 1.5px solid var(--accent-color);
+    outline: solid 1.5px var(--accent-color);
+    color: var(--accent-color);
+}
+
+.box-1 {
+    grid-column-start: 6;
+    grid-column-end: 7;
+}
+.box-2 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+.box-3 {
+    grid-column-start: 6;
+    grid-column-end: 7;
+}
+.box-4 {
+    grid-column-start: 8;
+    grid-column-end: 9;
+}
+/* boxes 5 to 10 are consecutive and in the right place */
+.box-11 {
+    grid-column-start: 8;
+    grid-column-end: 9;
+}
+.box-12 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+.box-13 {
+    grid-column-start: 7;
+    grid-column-end: 8;
+}
+.box-14 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+.box-15 {
+    grid-column-start: 5;
+    grid-column-end: 6;
+}
+/* boxes 16 to 17 are consecutive and in the right place */
+.box-18 {
+    grid-column-start: 7;
+    grid-column-end: 8;
+}
+
+.black-squares {
+    padding-top: 4px;
+    padding-left: 6px;
+    color: var(--base-color);
+    background-color: var(--accent-color);
+}
+
+.letter-square {
+    font-size: 1.5rem;
+    text-align: center;
+    padding-top: 25px;
+}
+
+.list {
+    width: 30%;
+    position: sticky;
+    bottom: 100px;
+    margin-left: 15vw;
+    line-height: 2rem;
+    color: var(--accent-color);
+}
+
+a {
+    display: block;
+    text-decoration: none;
+    color: var(--accent-color);
+}
+
+.links {
+    text-decoration: none;
+}
+
+
+/* styling light/dark mode button */
+.btn {
+    position: fixed;
+    top: 20px;
+    right: 23px;
+    font-size: 11px;
+    background-color: var(--base-color);
+    border: 1.5px solid var(--accent-color);
+    border-radius: 15px;
+    padding: 8px 15px;
+    color: var(--accent-color);
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: var(--accent-color);
+    color: var(--base-color);
+}
+
+
+/* ================================================================================== */
+/* =================================ABOUT ME========================================= */
+/* ================================================================================== */
+
+.home-btn {
+    width: 30px;
+    height: 30px;
+    margin-left: 20px;
+    background-color: var(--accent-color);
+    border-radius: 20px;
+}
+
+.btns-wrapper {
+    margin: 20px 0 9vh 0;
+}
+
+.about-me-main {
+    width: 80%;
+    margin: auto;
+    display: flex;
+}
+
+.about-me-title-wrapper {
+    /* position: absolute; */
+    display: grid;
+    grid-template-columns: repeat(3, var(--box-width));
+    grid-template-rows: repeat(7, var(--box-width));
+    /* margin-left: 50px; */
+}
+
+/* placing each box on desiganted place */
+.about-me-box-1 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+.about-me-box-2 {
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+.about-me-box-3 {
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+.about-me-box-4 {
+    grid-row-start: 4;
+    grid-row-end: 5;
+}
+.about-me-box-5 {
+    grid-row-start: 5;
+    grid-row-end: 6;
+}
+.about-me-box-6 {
+    grid-row-start: 6;
+    grid-row-end: 7;
+}
+.about-me-box-7 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 7;
+    grid-row-end: 8;
+}
+.about-me-box-8 {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 7;
+    grid-row-end: 8;
+}
+
+.about-me-text-wrapper {
+    position: relative;
+    padding: 0 100px 0 10px;
+    text-align: justify;
+    color: var(--accent-color);
+}
+
+.about-me-text-wrapper p {
+    margin: 20px 0;
+    line-height: 1.5rem;
+}
+
+.about-me-github-btn {
+    text-decoration: none;
+    width: 100px;
+    /* margin: auto; */
+    font-size: 11px;
+    text-align: center;
+    background-color: transparent;
+    border: 1.5px solid var(--accent-color);
+    border-radius: 15px;
+    padding: 8px 15px;
+    margin: 20px 0;
+    color: var(--accent-color);
+}
+
+.about-me-github-btn:hover {
+    background-color: var(--accent-color);
+    color: var(--base-color);
+}
+
+.about-me-btns {
+    position: absolute;
+    text-decoration: none;
+    width: 100px;
+    /* margin: auto; */
+    font-size: 11px;
+    text-align: center;
+    background-color: transparent;
+    border: 1.5px solid var(--accent-color);
+    border-radius: 15px;
+    padding: 8px 15px;
+    /* margin: 20px 0; */
+    color: var(--accent-color);
+}
+
+.about-me-btns:hover {
+    background-color: var(--accent-color);
+    color: var(--base-color);
+}
+
+.about-me-contact-btn {
+    left: 200px;
+}
+
+.about-me-image-wrapper img {
+    border: 2px solid var(--accent-color);
+    border-radius: 50px;
+}
+
+
+
+
+
+
+/* ================================================================================== */
+/* =================================PROJECTS========================================= */
+/* ================================================================================== */
+
+.projects-main {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.projects-title-wrapper {
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(9, var(--box-width));
+    grid-template-rows: repeat(1, var(--box-width));
+    margin-bottom: 100px;
+}
+
+/* old projects page */
+/* .projects-card-wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+.divChild {
+    display: block;
+    background-color: transparent;
+    border: 3px solid var(--accent-color);
+    border-radius: 20px;
+    width: 80%;
+    margin: 0 auto;
+    text-decoration: none;
+    margin-bottom: 30px;
+}
+.divChild:hover {
+    transform: translate(7px, -7px);
+    box-shadow: -7px 7px 5px 0px var(--accent-color);
+}
+.divChild img {
+    padding: 20px 0;
+    width: 80%;
+    margin: auto;
+    display: block;
+    border-radius: 18%;
+}
+.divChild h2 {
+    text-align: center;
+    padding-bottom: 10px;
+    color: var(--accent-color);
+    font-size: 130%;
+}
+.divChild h4 {
+    text-align: center;
+    color: var(--accent-color);
+    padding-bottom: 20px;
+    font-size: 100%;
+} */
+
+
+
+/* ================================================================================== */
+/* =============================NEW-PROJECTS========================================= */
+/* ================================================================================== */
+
+div.project-item {
+    margin-bottom: 100px;
+}
+
+div.project-item img {
+    width: 80%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    /* border: 3px solid var(--accent-color); */
+    border-radius: 5px;
+}
+
+div.project-item div.div-item-text {
+    padding: 10px 0px;
+}
+
+div.project-item div.div-item-text .item-text{
+    font-weight: 500;
+    text-align: center;
+}
+
+div.project-item div.div-item-text a {
+    font-style: italic;
+    text-decoration: underline;
+    padding-top: 10px;
+}
+
+/* currently working on */
+div.projects-main h2 {
+    text-align: center;
+    margin: 20px 0;
+}
+
+
+/* ================================================================================== */
+/* =============================OTHER-WORK=========================================== */
+/* ================================================================================== */
+
+
+.other-main {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.other-title-wrapper {
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(6, var(--box-width));
+    grid-template-rows: repeat(1, var(--box-width));
+    margin-bottom: 100px;
+}
+
+.other-item {
+    display: flex;
+    justify-content: space-around;
+}
+
+.other-item a {
+    text-decoration: underline;
+}
+
+.other-item .other-item-text {
+    font-size: 1.3rem;
+    font-weight: 500;
+}
