@@ -22,6 +22,7 @@
     div.wrapper {
         grid-template-columns: repeat(8, var(--small-box-width));
         grid-template-rows: repeat(6, var(--small-box-width));
+        margin-top: 13vh;
     }
 
     a.black-squares {
@@ -169,7 +170,7 @@ body {
     align-items: center;
     grid-template-columns: repeat(8, var(--box-width));
     grid-template-rows: repeat(6, var(--box-width));
-    margin-top: 13vh;
+    margin-top: 0vh;
 }
 
 .box {
@@ -232,8 +233,11 @@ body {
 }
 
 .black-squares-main-page:hover {
-    transform: translate(-6px, -6px);
-    box-shadow: 6px 6px 5px 0px var(--accent-color);
+    /* transform: translate(-6px, -6px);
+    box-shadow: 6px 6px 5px 0px #5A6474; */
+    background-color: #333F53;
+    border: 2px solid #333F53;
+    outline: 1px solid #333F53;
 }
 
 .letter-square {
