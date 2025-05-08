@@ -92,7 +92,9 @@
         left: 150px;
     }
 
-
+    a.about-me-github-btn {
+        padding: 6px 1px;
+    }
 
     /* projects responsiveness */
 
@@ -100,6 +102,18 @@
         margin: auto;
         grid-template-columns: repeat(9, var(--small-box-width));
         grid-template-rows: repeat(1, var(--small-box-width));
+    }
+
+    div.projects-main h2 {
+        font-size: 0.8rem;
+    }
+
+    div.projects-main div.project-item {
+        margin-bottom: 30px;
+    }
+
+    div.projects-main div.project-item .item-text {
+        font-size: 0.5rem;
     }
 
     div.projects-card-wrapper {
@@ -111,12 +125,31 @@
         margin-bottom: 0;
     }
 
+    /* other-work responsiveness */
+    div.other-title-wrapper {
+        margin: auto;
+        grid-template-columns: repeat(6, var(--small-box-width));
+        grid-template-rows: repeat(1, var(--small-box-width));
+        
+    }
 
+    div.other-items-container{
+        width: 90%;
+    }
+
+    div.other-items-container div.other-item {
+        margin-bottom: 0px;
+        margin-top: 30px;
+    }
+
+    div.other-items-container div.other-item .other-item-text {
+        font-size: 0.7rem;
+    }
   }
 
 @font-face {
     font-family: 'Montserrat-SemiBold';
-    src: url(/Montserrat/Montserrat-VariableFont_wght.ttf);
+    src: url(./Montserrat/Montserrat-VariableFont_wght.ttf);
 }
 
 * {
@@ -198,6 +231,11 @@ body {
     background-color: var(--accent-color);
 }
 
+.black-squares-main-page:hover {
+    transform: translate(-6px, -6px);
+    box-shadow: 6px 6px 5px 0px var(--accent-color);
+}
+
 .letter-square {
     font-size: 1.5rem;
     text-align: center;
@@ -226,9 +264,10 @@ a {
 
 /* styling light/dark mode button */
 .btn {
-    position: fixed;
-    top: 20px;
-    right: 23px;
+    /* position: fixed; */
+    /* top: 20px;
+    right: 23px; */
+    margin-right: 20px;
     font-size: 11px;
     background-color: var(--base-color);
     border: 1.5px solid var(--accent-color);
@@ -258,6 +297,8 @@ a {
 
 .btns-wrapper {
     margin: 20px 0 9vh 0;
+    display: flex;
+    justify-content: space-between;
 }
 
 .about-me-main {
@@ -384,7 +425,7 @@ a {
 /* ================================================================================== */
 
 .projects-main {
-    width: 80%;
+    width: 100%;
     margin: auto;
     display: flex;
     flex-direction: column;
@@ -463,9 +504,11 @@ div.project-item div.div-item-text {
 div.project-item div.div-item-text .item-text{
     font-weight: 500;
     text-align: center;
+    color: var(--accent-color);
 }
 
 div.project-item div.div-item-text a {
+    color: var(--accent-color);
     font-style: italic;
     text-decoration: underline;
     padding-top: 10px;
@@ -473,6 +516,8 @@ div.project-item div.div-item-text a {
 
 /* currently working on */
 div.projects-main h2 {
+    /* font-size: 100%; */
+    color: var(--accent-color);
     text-align: center;
     margin: 20px 0;
 }
@@ -498,16 +543,31 @@ div.projects-main h2 {
     margin-bottom: 100px;
 }
 
-.other-item {
-    display: flex;
-    justify-content: space-around;
+.other-items-container {
+    width: 60%;
+    margin: auto;
 }
 
-.other-item a {
+.other-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    /* border-bottom: 2px solid var(--accent-color); */
+}
+
+.other-item button {
     text-decoration: underline;
+    border: none;
+    background-color: transparent;
+    color: var(--accent-color);
+}
+
+.other-item button:hover {
+    cursor: pointer;
 }
 
 .other-item .other-item-text {
+    color: var(--accent-color);
     font-size: 1.3rem;
     font-weight: 500;
 }
