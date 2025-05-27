@@ -497,7 +497,7 @@ div.project-item img {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    /* border: 3px solid var(--accent-color); */
+    border: 2px solid var(--accent-color);
     border-radius: 5px;
 }
 
