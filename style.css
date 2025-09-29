@@ -575,3 +575,39 @@ div.projects-main h2 {
     font-size: 1.3rem;
     font-weight: 500;
 }
+
+
+
+
+/* ================================================================================== */
+/* =============================GRAD PROJECT BLOG==================================== */
+/* ================================================================================== */
+
+.blog-entry {
+    color: var(--accent-color);
+    width: 70%;
+    margin: auto;
+    text-align: center;
+}
+
+.blog-entry .blog-entry-title {
+    padding: 40px 0;
+}
+
+.blog-entry .div1 {
+    width: 49%;
+    display: inline-block;
+    padding-bottom: 40px;
+}
+
+.blog-entry .div1 .div1-title {
+    padding: 20px 0;
+}
+
+.blog-entry .div1 ul {
+    list-style-position: inside;
+}
+
+.blog-entry .blog-entry-text {
+    text-align: left;
+}
